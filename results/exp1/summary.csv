@@ -1,0 +1,3 @@
+policy,n_tareas,task_success,termination_correct,relation_correct,evidence_supported,citation_correct,steps_media,tool_calls_media,tool_errors_total,repeated_actions_total,latency_ms_media,tokens_media,tokens_in_total,tokens_out_total
+W0_workflow,12,0.5,0.75,0.25,0.5,0.571,3.167,2.167,4,0,6136.267,671.25,7082,973
+W1_agent,12,0.083,0.167,0.125,0.25,0.0,3.583,2.583,5,4,59058.35,6222.333,71729,2939

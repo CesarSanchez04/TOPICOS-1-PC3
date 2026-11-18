@@ -1,0 +1,69 @@
+{
+ "executed_at": "2026-11-12T17:34:50+00:00",
+ "platform": "macOS-15.4.1-arm64-arm-64bit",
+ "python": "3.12.3",
+ "packages": {
+  "torch": "2.14.1",
+  "transformers": "5.21.0",
+  "sentence-transformers": "6.2.0",
+  "faiss-cpu": "1.15.1",
+  "rank-bm25": "0.2.2",
+  "pydantic": "2.14.1"
+ },
+ "generator": "Qwen/Qwen2.5-0.5B-Instruct",
+ "decoding": {
+  "do_sample": false,
+  "repetition_penalty": 1.0,
+  "max_new_tokens_compare": 220
+ },
+ "dense_model": "intfloat/multilingual-e5-small",
+ "reranker_model": "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1",
+ "retrieval": "condici\u00f3n C del parcial",
+ "evidence_score_threshold": 2.0,
+ "limits": {
+  "max_steps": 8,
+  "max_tool_calls": 6,
+  "total_deadline_s": 180.0,
+  "timeout_per_tool_ms": [
+   [
+    "search_evidence",
+    5000
+   ],
+   [
+    "compare_evidence",
+    60000
+   ],
+   [
+    "check_citation",
+    400
+   ]
+  ],
+  "max_input_tokens": 1800,
+  "max_memory_tokens": 350,
+  "max_output_tokens_decision": 40,
+  "max_output_tokens_args": 32,
+  "max_output_tokens_id": 16,
+  "max_output_tokens_compare": 220,
+  "no_progress_window": 3,
+  "max_repeats": 2
+ },
+ "sha256": {
+  "data/corpus.jsonl": "a588b591264c4aaeb405424919ea01c40b1de39edbc71f736bf69c97f347e79c",
+  "data/queries.jsonl": "3db358757d5eba8c027b45fb49b448e50a0e7a7803321834bfa325c7ebdee9d5",
+  "data/qrels.json": "6aefedf19b3458c78d2a64b906c67447f958d39cae5a1b0741a3f5cbd21a1636",
+  "data/tasks.jsonl": "fbf60521a21c5ebd192b513c33bb110f5b3193010607fba728f504b564ddfb4f",
+  "data/expected_results.jsonl": "8e1d4993ecb014213b553bed23e1991111759f142e48a2efd79f20521e723f1b",
+  "data/memory_scenarios.jsonl": "dc4b9a3ee615f93370e05e5d75ad142ecf6178bcd013afe61d3e6dfaee04645e",
+  "prompts/agent_system.txt": "36feaf523ab14c493da0ab671e47c8a043ac96532fc123dda52e22061a75120e",
+  "prompts/agent_user.txt": "fc72d1d11fc31b51060d7c0d14c77dfb704bcdbcec1fbadcf6be49a23cad198b",
+  "prompts/rag_system.txt": "e960d6783fa13b6dee20bc4ca0cab1fd500a17a0cb28c4ad18ed7a280557b97f",
+  "prompts/rag_user.txt": "41caa7e88d3ba7e58c78806105854051eb706c7714ee945941a5755748a9c6dc"
+ },
+ "experiment": "exp2",
+ "configs": [
+  "M0",
+  "M1",
+  "M2",
+  "M3"
+ ]
+}

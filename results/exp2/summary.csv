@@ -1,0 +1,5 @@
+config,n,task_success,memory_recall_accuracy,recall_n,cross_session_retention,cross_n,stale_memory_error_rate,stale_n,wrong_memory_use_rate,wrong_n,solved_by_tools,context_tokens_media,memory_tokens_media,steps_media,latency_ms_media
+M0,11,0.182,0.0,0/6,0.0,0/3,,0/0,,0/0,0/6,7934.0,0.0,4.818,68623.873
+M1,11,0.182,0.0,0/6,0.0,0/3,0.0,0/1,0.0,0/5,1/6,9361.727,92.091,4.818,67443.2
+M2,11,0.273,0.0,0/6,0.0,0/3,0.0,0/1,0.0,0/10,0/6,10686.545,228.636,4.545,75887.227
+M3,11,0.273,0.0,0/6,0.0,0/3,,0/0,0.0,0/6,1/6,10808.455,154.182,4.818,74598.136

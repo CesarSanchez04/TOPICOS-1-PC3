@@ -1,0 +1,45 @@
+task_id,sequence_id,session_id,task_type,stop_reason,steps,tool_calls,latency_ms,context_tokens,memory_tokens,memory_ids_in_context,task_success,cited_id_proposed,needs_memory,cross_session,wrong_memory_use,stale_in_context,stale_memory_error,memory_in_context,config,gold_doc_id,gold_memory_in_context,memory_recall_correct,solved_by_tools
+S1.1,S1,S1-A,review,REPEATED_ACTION,3,1,34288.2,4317,0,[],False,,False,False,False,False,False,False,M0,,,,
+S1.2,S1,S1-A,verify_citation,MAX_STEPS,7,6,108920.2,12708,0,[],False,,True,False,False,False,False,False,M0,2001.08361,False,False,False
+S1.3,S1,S1-B,review,NO_PROGRESS,4,3,42262.1,6087,0,[],False,,False,False,False,False,False,False,M0,,,,
+S1.4,S1,S1-B,verify_citation,REPEATED_ACTION,4,2,57790.2,6090,0,[],False,,True,False,False,False,False,False,M0,2203.15556,False,False,False
+S2.1,S2,S2-A,review,SUCCESS,3,2,38757.8,4302,0,[],True,,False,False,False,False,False,False,M0,,,,
+S2.2,S2,S2-A,review,SUCCESS,3,2,36349.9,4113,0,[],True,,False,False,False,False,False,False,M0,,,,
+S2.3,S2,S2-B,verify_citation,SUCCESS,6,5,111647.8,11189,0,[],False,1706.03762,True,True,False,False,False,False,M0,2206.07682,False,False,False
+S2.4,S2,S2-B,verify_citation,REPEATED_ACTION,6,4,73700.2,11104,0,[],False,,True,True,False,False,False,False,M0,2208.07339,False,False,False
+S3.1,S3,S3-A,review,REPEATED_ACTION,7,5,101741.7,11144,0,[],False,,False,False,False,False,False,False,M0,,,,
+S3.2,S3,S3-A,verify_citation,NO_PROGRESS,6,6,96990.9,10031,0,[],False,,True,False,False,False,False,False,M0,1911.02150,False,False,False
+S3.3,S3,S3-B,verify_citation,NO_PROGRESS,4,3,52413.6,6189,0,[],False,,True,True,False,False,False,False,M0,2305.13245,False,False,False
+S1.1,S1,S1-A,review,REPEATED_ACTION,3,1,28138.8,4317,0,[],False,,False,False,False,False,False,False,M1,,,,
+S1.2,S1,S1-A,verify_citation,NO_PROGRESS,5,4,66682.4,11058,164,['W-S1.1'],False,2011.04006,True,False,False,False,False,True,M1,2001.08361,True,False,False
+S1.3,S1,S1-B,review,NO_PROGRESS,4,3,41188.4,6087,0,[],False,,False,False,False,False,False,False,M1,,,,
+S1.4,S1,S1-B,verify_citation,NO_PROGRESS,4,3,52458.5,8098,171,['W-S1.3'],False,,True,False,False,True,False,True,M1,2203.15556,True,False,False
+S2.1,S2,S2-A,review,SUCCESS,3,2,36193.5,4302,0,[],True,,False,False,False,False,False,False,M1,,,,
+S2.2,S2,S2-A,review,NO_PROGRESS,7,6,113976.6,15192,164,['W-S2.1'],False,2206.07682,False,False,False,False,False,True,M1,,,,
+S2.3,S2,S2-B,verify_citation,SUCCESS,6,5,74410.9,11189,0,[],False,1706.03762,True,True,False,False,False,False,M1,2206.07682,False,False,False
+S2.4,S2,S2-B,verify_citation,REPEATED_ACTION,6,4,100152.8,15733,253,['W-S2.3'],False,,True,True,False,False,False,True,M1,2208.07339,False,False,False
+S3.1,S3,S3-A,review,REPEATED_ACTION,7,5,107693.2,11144,0,[],False,,False,False,False,False,False,False,M1,,,,
+S3.2,S3,S3-A,verify_citation,SUCCESS,4,3,65208.8,9670,261,['W-S3.1'],True,1911.02150,True,False,False,False,False,True,M1,1911.02150,True,False,True
+S3.3,S3,S3-B,verify_citation,NO_PROGRESS,4,3,55771.3,6189,0,[],False,,True,True,False,False,False,False,M1,2305.13245,False,False,False
+S1.1,S1,S1-A,review,REPEATED_ACTION,3,1,28339.0,4317,0,[],False,,False,False,False,False,False,False,M2,,,,
+S1.2,S1,S1-A,verify_citation,REPEATED_ACTION,7,5,99954.5,15575,165,['E-S1.1'],False,,True,False,False,False,False,True,M2,2001.08361,True,False,False
+S1.3,S1,S1-B,review,SUCCESS,4,3,59568.8,7299,165,['E-S1.1'],True,,False,False,False,False,False,True,M2,,,,
+S1.4,S1,S1-B,verify_citation,NO_PROGRESS,5,4,85619.5,13301,324,"['E-S1.3', 'E-S1.1']",False,,True,False,False,True,False,True,M2,2203.15556,True,False,False
+S2.1,S2,S2-A,review,SUCCESS,3,2,57339.7,5423,159,['E-S1.3'],True,,False,False,False,False,False,True,M2,,,,
+S2.2,S2,S2-A,review,SUCCESS,3,2,59454.5,6233,324,"['E-S2.1', 'E-S1.3']",True,,False,False,False,False,False,True,M2,,,,
+S2.3,S2,S2-B,verify_citation,SUCCESS,3,2,51093.4,7406,288,"['E-S2.1', 'E-S2.2']",False,2208.07339,True,True,False,False,False,True,M2,2206.07682,True,False,False
+S2.4,S2,S2-B,verify_citation,REPEATED_ACTION,5,3,85563.0,12384,266,['E-S2.3'],False,,True,True,False,False,False,True,M2,2208.07339,True,False,False
+S3.1,S3,S3-A,review,REPEATED_ACTION,6,4,130043.1,17534,266,['E-S2.3'],False,2208.07339,False,False,False,False,False,True,M2,,,,
+S3.2,S3,S3-A,verify_citation,REPEATED_ACTION,5,3,77766.1,12652,292,['E-S3.1'],False,,True,False,False,False,False,True,M2,1911.02150,True,False,False
+S3.3,S3,S3-B,verify_citation,NO_PROGRESS,6,6,100017.9,15428,266,['E-S2.3'],False,,True,True,False,False,False,True,M2,2305.13245,False,False,False
+S1.1,S1,S1-A,review,REPEATED_ACTION,3,1,26179.4,4317,0,[],False,,False,False,False,False,False,False,M3,,,,
+S1.2,S1,S1-A,verify_citation,MAX_STEPS,7,6,90738.2,12708,0,[],False,,True,False,False,False,False,False,M3,2001.08361,False,False,False
+S1.3,S1,S1-B,review,NO_PROGRESS,4,3,35775.7,6087,0,[],False,,False,False,False,False,False,False,M3,,,,
+S1.4,S1,S1-B,verify_citation,REPEATED_ACTION,4,2,45740.9,6090,0,[],False,,True,False,False,False,False,False,M3,2203.15556,False,False,False
+S2.1,S2,S2-A,review,SUCCESS,3,2,43584.0,4302,0,[],True,,False,False,False,False,False,False,M3,,,,
+S2.2,S2,S2-A,review,SUCCESS,3,2,40586.6,5526,196,"['F-2208.07339', 'F-2206.07682']",True,,False,False,False,False,False,True,M3,,,,
+S2.3,S2,S2-B,verify_citation,SUCCESS,3,2,48062.0,7432,300,"['F-2206.07682', 'F-2201.11903', 'F-2208.07339']",True,2206.07682,True,True,False,False,False,True,M3,2206.07682,True,False,True
+S2.4,S2,S2-B,verify_citation,ABSTAIN,6,4,103160.4,16154,300,"['F-2201.11903', 'F-2208.07339', 'F-2206.07682']",False,2305.14314,True,True,False,False,False,True,M3,2208.07339,True,False,False
+S3.1,S3,S3-A,review,MAX_STEPS,7,6,165446.7,20593,300,"['F-2208.07339', 'F-2206.07682', 'F-2201.11903']",False,2206.07682,False,False,False,False,False,True,M3,,,,
+S3.2,S3,S3-A,verify_citation,MAX_STEPS,7,6,117449.5,19317,300,"['F-2208.07339', 'F-2201.11903', 'F-2206.07682']",False,,True,False,False,False,False,True,M3,1911.02150,False,False,False
+S3.3,S3,S3-B,verify_citation,NO_PROGRESS,6,6,103856.1,16367,300,"['F-2201.11903', 'F-2208.07339', 'F-2206.07682']",False,,True,True,False,False,False,True,M3,2305.13245,False,False,False

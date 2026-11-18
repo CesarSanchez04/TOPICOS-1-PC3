@@ -1,0 +1,25 @@
+task_id,policy,expected_stop,stop_reason,task_success,termination_correct,relation,gold_relation,relation_correct,evidence_supported,citation_correct,citation_verified_in_state,steps,tool_calls,tool_errors,repeated_actions,latency_ms,tokens_in,tokens_out,tokens,stop_detail
+T01,W0_workflow,SUCCESS,ABSTAIN,False,False,,disagree,False,False,False,False,2,1,0,0,268.9,0,0,0,la política decidió abstenerse
+T02,W0_workflow,SUCCESS,INVALID_OUTPUT,False,False,,disagree,False,False,False,False,3,2,1,0,14139.4,760,125,885,'analysis' no disponible: la herramienta violó su contrato de salida
+T03,W0_workflow,SUCCESS,SUCCESS,True,True,agree,agree,True,True,True,True,4,3,0,0,11908.3,741,118,859,respuesta validada
+T04,W0_workflow,SUCCESS,INVALID_OUTPUT,False,False,,disagree,False,False,False,False,3,2,1,0,14684.5,896,134,1030,'analysis' no disponible: la herramienta violó su contrato de salida
+T05,W0_workflow,SUCCESS,SUCCESS,True,True,agree,agree,True,True,,,3,2,0,0,7482.0,828,132,960,respuesta validada
+T06,W0_workflow,SUCCESS,SUCCESS,False,True,agree,disagree,False,True,True,True,4,3,0,0,5594.0,769,100,869,respuesta validada
+T07,W0_workflow,SUCCESS,SUCCESS,False,True,agree,disagree,False,True,True,True,4,3,0,0,4199.8,695,78,773,respuesta validada
+T08,W0_workflow,SUCCESS,SUCCESS,False,True,agree,disagree,False,False,True,True,4,3,0,0,4265.3,768,75,843,respuesta validada
+T09,W0_workflow,TOOL_ERROR,TOOL_ERROR,True,True,,,,,,False,4,3,1,0,6143.9,891,112,1003,'citation' no disponible: check_citation falló (timeout)
+T10,W0_workflow,INVALID_OUTPUT,INVALID_OUTPUT,True,True,,,,,,,3,2,1,0,4510.5,734,99,833,'analysis' no disponible: la herramienta violó su contrato de salida
+T11,W0_workflow,ABSTAIN,ABSTAIN,True,True,,,,,,,2,1,0,0,225.1,0,0,0,la política decidió abstenerse
+T12,W0_workflow,ABSTAIN,ABSTAIN,True,True,,,,,,,2,1,0,0,213.5,0,0,0,la política decidió abstenerse
+T01,W1_agent,SUCCESS,SUCCESS,False,True,agree,disagree,False,True,False,False,4,3,0,0,104873.4,6973,253,7226,respuesta validada
+T02,W1_agent,SUCCESS,REPEATED_ACTION,False,False,,disagree,False,False,False,False,5,3,1,2,101947.2,11334,377,11711,acción repetida sin avance: check_citation
+T03,W1_agent,SUCCESS,INVALID_OUTPUT,False,False,,agree,False,False,False,False,3,2,0,0,38215.9,4474,188,4662,finish prematuro: falta 'citation' y nunca se obtuvo
+T04,W1_agent,SUCCESS,INVALID_OUTPUT,False,False,,disagree,False,False,False,False,3,2,0,0,46712.6,4446,223,4669,finish prematuro: falta 'citation' y nunca se obtuvo
+T05,W1_agent,SUCCESS,SUCCESS,True,True,agree,agree,True,True,,,3,2,0,0,32739.3,4100,189,4289,respuesta validada
+T06,W1_agent,SUCCESS,INVALID_OUTPUT,False,False,,disagree,False,False,False,False,3,2,0,0,36711.7,4422,201,4623,finish prematuro: falta 'citation' y nunca se obtuvo
+T07,W1_agent,SUCCESS,INVALID_OUTPUT,False,False,,disagree,False,False,False,False,3,2,0,0,37474.6,4154,160,4314,finish prematuro: falta 'citation' y nunca se obtuvo
+T08,W1_agent,SUCCESS,NO_PROGRESS,False,False,,disagree,False,False,False,False,4,3,1,1,59121.0,6738,197,6935,3 pasos sin actualizar el estado
+T09,W1_agent,TOOL_ERROR,NO_PROGRESS,False,False,,,,,,False,5,5,2,0,100770.9,10240,434,10674,3 pasos sin actualizar el estado
+T10,W1_agent,INVALID_OUTPUT,NO_PROGRESS,False,False,,,,,,,4,3,1,1,62602.6,6096,274,6370,3 pasos sin actualizar el estado
+T11,W1_agent,ABSTAIN,SUCCESS,False,False,agree,,,,,,3,2,0,0,44338.8,4315,213,4528,respuesta validada
+T12,W1_agent,ABSTAIN,SUCCESS,False,False,agree,,,,,,3,2,0,0,43192.2,4437,230,4667,respuesta validada
